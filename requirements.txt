@@ -1,0 +1,8 @@
+opencv-python
+tqdm
+scipy
+pytools
+kornia
+path
+protobuf
+tensorboardx

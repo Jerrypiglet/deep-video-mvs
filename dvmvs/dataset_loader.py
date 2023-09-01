@@ -7,7 +7,7 @@ from multiprocessing.pool import Pool
 import cv2
 import numpy as np
 import torch
-from kornia import adjust_brightness, adjust_gamma, adjust_contrast
+from kornia.enhance import adjust_brightness, adjust_gamma, adjust_contrast
 from path import Path
 from torch.utils.data import Dataset, DataLoader
 

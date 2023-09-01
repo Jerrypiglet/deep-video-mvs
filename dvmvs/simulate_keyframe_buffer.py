@@ -37,6 +37,7 @@ def simulate_keyframe_buffer(test_dataset_path, output_folder, n_measurement_fra
                 output_lines.append("TRACKING LOST")
             elif response == 1:
                 measurement_frames = keyframe_buffer.get_best_measurement_frames(n_measurement_frames)
+                # print(i, len(poses), len(measurement_frames[0]), measurement_frames[0])
 
                 output_line = image_filenames[i].split("/")[-1]
                 for (measurement_pose, measurement_image, measurement_index) in measurement_frames:
@@ -101,15 +102,15 @@ def simulate_simple_buffer(test_dataset_path, output_folder, n_skip, n_measureme
 
 
 def main():
-    output_folder = "../sample-data/indices"
-    test_dataset_path = "../sample-data/hololens-dataset"
-    simulate_keyframe_buffer(test_dataset_path, output_folder, n_measurement_frames=1)
+    output_folder = "sample-data/indices"
+    test_dataset_path = "sample-data/hololens-dataset"
+    # simulate_keyframe_buffer(test_dataset_path, output_folder, n_measurement_frames=1)
     simulate_keyframe_buffer(test_dataset_path, output_folder, n_measurement_frames=2)
-    simulate_keyframe_buffer(test_dataset_path, output_folder, n_measurement_frames=3)
+    # simulate_keyframe_buffer(test_dataset_path, output_folder, n_measurement_frames=3)
 
     # for evaluation of simple selection (comment out the rest if only our keyframe selection method is desired)
-    simulate_simple_buffer(test_dataset_path, output_folder, n_skip=10, n_measurement_frames=2)
-    simulate_simple_buffer(test_dataset_path, output_folder, n_skip=20, n_measurement_frames=2)
+    # simulate_simple_buffer(test_dataset_path, output_folder, n_skip=10, n_measurement_frames=2)
+    # simulate_simple_buffer(test_dataset_path, output_folder, n_skip=20, n_measurement_frames=2)
 
 
 main()

@@ -48,6 +48,21 @@ If you find this project useful for your research, please cite:
 <br />
 
 ---
+### Rui
+---
+
+``` bash
+conda create -n dvmvs-env-py310 python=3.10 pip
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+# conda install pytorch3d -c pytorch3d
+pip install "git+https://github.com/facebookresearch/pytorch3d.git"
+pip install -r requirements.txt
+cd ..
+pip install -e deep-video-mvs
+```
+
+---
 ### Dependencies / Installation
 ---
 ```

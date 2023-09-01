@@ -33,15 +33,16 @@ class Config:
     test_optimal_R_measure = 0.0
 
     # SET THESE: TRAINING FOLDER LOCATIONS
-    dataset = "/media/ardaduz/T5/train"
-    train_run_directory = "/home/ardaduz/Workspace/git/deep-video-mvs/training-runs"
+    # dataset = "/media/ardaduz/T5/train"
+    dataset = "/newfoundland/ScanNet/extracted/"
+    train_run_directory = "/home/ruizhu/Documents/Projects/ml-finerecon/third-party/deep-video-mvs/training-runs"
 
     # SET THESE: TESTING FOLDER LOCATIONS
     # for run-testing-online.py (evaluate a single scene, WITHOUT keyframe indices, online selection)
-    test_online_scene_path = "/home/ardaduz/Workspace/git/deep-video-mvs/sample-data/hololens-dataset/000"
+    test_online_scene_path = "/home/ruizhu/Documents/Projects/ml-finerecon/third-party/deep-video-mvs/sample-data/hololens-dataset/000"
 
     # for run-testing.py (evaluate all available scenes, WITH pre-calculated keyframe indices)
-    test_offline_data_path = "/home/ardaduz/Workspace/git/deep-video-mvs/sample-data"
+    test_offline_data_path = "/home/ruizhu/Documents/Projects/ml-finerecon/third-party/deep-video-mvs/sample-data"
 
     # below give a dataset name like tumrgbd, i.e. folder or None
     # if None, all datasets will be evaluated given that
